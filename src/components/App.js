@@ -8,7 +8,8 @@ const App = (props) => {
     if(index<props.slides.length){
         setIndex(index+1);
         setSlide(props.slides[index]);
-        document.getElementById("prev").disabled=true;
+        document.getElementById("prev").disabled=false;
+        document.getElementById("resart").disabled=false;
     }
 
     if(index==props.length){
@@ -23,6 +24,7 @@ const App = (props) => {
     }
     if(index==0){
       document.getElementById("prev").disabled=true;
+      document.getElementById("resart").disabled=true;
     }
   }
   const restartHandle = () =>{
