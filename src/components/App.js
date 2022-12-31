@@ -6,32 +6,26 @@ const App = (props) => {
   const nextHandle = () =>{
     if(index<props.slides.length){
         setIndex(index => index+1);
-        document.getElementById("prev").disabled=false;
-        document.getElementById("restart").disabled=false;
     }
-    console.log("index = "+index);
+    //console.log("index = "+index);
     if(index==Object.entries(props.slides).length-2){
       document.getElementById("next").disabled=true;
     }
-    console.log("index = "+index);
+    //console.log("index = "+index);
   }
   const prevHandle = () =>{
-    console.log("prev => index = "+index);
+    //console.log("prev => index = "+index);
     if(index>0){
         setIndex(index => index-1);
         document.getElementById("next").disabled=false;
     }
-    if(index===0){
-      document.getElementById("prev").disabled=true;
-      document.getElementById("restart").disabled=true;
-    }
-    console.log("index = "+index);
+    //console.log("index = "+index);
   }
   const restartHandle = (event) =>{
-    console.log("restart => index = "+index);
+    //console.log("restart => index = "+index);
     setIndex(0);
     event.currentTarget.disabled = true;
-    console.log("index = "+index);
+    //console.log("index = "+index);
   }
 
   return (
@@ -42,7 +36,7 @@ const App = (props) => {
         </div>
         <div>
           <button id="restart" data-testid="button-restart" onClick={restartHandle} disabled={index==0}>Restart</button>
-          <button id="prev" data-testid="button-prev" onClick={prevHandle} disabled={index>0}>Prev</button>
+          <button id="prev" data-testid="button-prev" onClick={prevHandle} disabled={index==0}>Prev</button>
           <button id="next" data-testid="button-next" onClick={nextHandle} >Next</button>
         </div>
     </div>
