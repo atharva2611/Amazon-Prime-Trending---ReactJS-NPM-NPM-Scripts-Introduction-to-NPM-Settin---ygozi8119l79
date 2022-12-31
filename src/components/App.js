@@ -10,26 +10,31 @@ const App = (props) => {
         document.getElementById("prev").disabled=false;
         document.getElementById("restart").disabled=false;
     }
-
+    console.log("index = "+index);
     if(index==Object.entries(props.slides).length-1){
       document.getElementById("next").disabled=true;
     }
+    console.log("index = "+index);
   }
   const prevHandle = () =>{
+    console.log("prev => index = "+index);
     if(index>0){
         setIndex(index-1);
         document.getElementById("next").disabled=false;
     }
-    if(index==0){
+    if(index===0){
       document.getElementById("prev").disabled=true;
       document.getElementById("restart").disabled=true;
     }
+    console.log("index = "+index);
   }
   const restartHandle = () =>{
-    if(index!=0){
+    console.log("restart => index = "+index);
+    if(index!==0){
         setIndex(0);
         document.getElementById("restart").disabled=true;
     }
+    console.log("index = "+index);
   }
   return (
     <div>
