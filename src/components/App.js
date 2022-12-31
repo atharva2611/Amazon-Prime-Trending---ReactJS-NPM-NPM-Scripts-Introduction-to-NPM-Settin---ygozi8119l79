@@ -39,8 +39,8 @@ const App = (props) => {
   return (
     <div>
         <div>
-            <h1>{slide.title}</h1>
-            <p>{slide.text}</p>
+            <h1 data-testid="title">{slide.title}</h1>
+            <p data-testid="text">{slide.text}</p>
         </div>
         <div>
           <button id="restart" data-testid="button-restart" disabled onClick={restartHandle}>Restart</button>
