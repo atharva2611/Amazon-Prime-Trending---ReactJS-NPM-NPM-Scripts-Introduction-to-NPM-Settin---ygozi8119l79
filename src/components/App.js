@@ -10,6 +10,18 @@ const App = (props) => {
         setSlide(props.slides[index]);
     }
   }
+  const prevHandle = () =>{
+    if(index>0){
+        setIndex(index-1);
+        setSlide(props.slides[index]);
+    }
+  }
+  const restartHandle = () =>{
+    if(index!=0){
+        setIndex(0);
+        setSlide(props.slides[index]);
+    }
+  }
   return (
     <div>
         <div>
