@@ -3,7 +3,8 @@ import '../styles/App.css';
 
 const App = (props) => {
   const [index,setIndex] = useState(0);
-
+  document.getElementById("prev").disabled=true;
+  document.getElementById("restart").disabled=true;
   const nextHandle = () =>{
     if(index<props.slides.length){
         setIndex(index => index+1);
@@ -11,7 +12,7 @@ const App = (props) => {
         document.getElementById("restart").disabled=false;
     }
     console.log("index = "+index);
-    if(index==Object.entries(props.slides).length-1){
+    if(index==Object.entries(props.slides).length-2){
       document.getElementById("next").disabled=true;
     }
     console.log("index = "+index);
@@ -36,6 +37,7 @@ const App = (props) => {
     }
     console.log("index = "+index);
   }
+
   return (
     <div>
         <div>
@@ -43,8 +45,8 @@ const App = (props) => {
             <p data-testid="text">{props.slides[index].text}</p>
         </div>
         <div>
-          <button id="restart" data-testid="button-restart" onClick={restartHandle} disabled>Restart</button>
-          <button id="prev" data-testid="button-prev" onClick={prevHandle} disabled>Prev</button>
+          <button id="restart" data-testid="button-restart" onClick={restartHandle} >Restart</button>
+          <button id="prev" data-testid="button-prev" onClick={prevHandle} >Prev</button>
           <button id="next" data-testid="button-next" onClick={nextHandle}>Next</button>
         </div>
     </div>
