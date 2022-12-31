@@ -9,7 +9,7 @@ const App = (props) => {
         setIndex(index+1);
         setSlide(props.slides[index]);
         document.getElementById("prev").disabled=false;
-        document.getElementById("resart").disabled=false;
+        document.getElementById("restart").disabled=false;
     }
 
     if(index==props.length){
@@ -24,7 +24,7 @@ const App = (props) => {
     }
     if(index==0){
       document.getElementById("prev").disabled=true;
-      document.getElementById("resart").disabled=true;
+      document.getElementById("restart").disabled=true;
     }
   }
   const restartHandle = () =>{
@@ -32,7 +32,7 @@ const App = (props) => {
         setIndex(0);
         setSlide(props.slides[index]);
         if(index==props.length){
-          document.getElementById("resart").disabled=true;
+          document.getElementById("restart").disabled=true;
         }
     }
   }
