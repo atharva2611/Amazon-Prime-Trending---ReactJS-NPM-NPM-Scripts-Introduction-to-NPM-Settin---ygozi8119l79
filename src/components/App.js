@@ -41,9 +41,9 @@ const App = (props) => {
             <p data-testid="text">{props.slides[index].text}</p>
         </div>
         <div>
-          <button id="restart" data-testid="button-restart" onClick={restartHandle} disabled={true}>Restart</button>
-          <button id="prev" data-testid="button-prev" onClick={prevHandle} disabled={true}>Prev</button>
-          <button id="next" data-testid="button-next" onClick={nextHandle}>Next</button>
+          <button id="restart" data-testid="button-restart" onClick={restartHandle} disabled={index==0}>Restart</button>
+          <button id="prev" data-testid="button-prev" onClick={prevHandle} disabled={index>0}>Prev</button>
+          <button id="next" data-testid="button-next" onClick={nextHandle} >Next</button>
         </div>
     </div>
   )
