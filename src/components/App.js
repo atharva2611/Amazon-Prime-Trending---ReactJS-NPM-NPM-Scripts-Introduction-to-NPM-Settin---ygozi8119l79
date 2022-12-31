@@ -7,8 +7,8 @@ const App = () => {
       {slides.map(slide=>{
         return (
           <div>
-            <h1>slide.text</h1>
-            <p>slide.title</p>
+            <h1>{slide.text}</h1>
+            <p>{slide.title}</p>
           </div>
         );
       })}
