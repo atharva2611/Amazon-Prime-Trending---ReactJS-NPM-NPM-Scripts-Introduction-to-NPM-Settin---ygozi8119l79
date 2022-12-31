@@ -34,8 +34,8 @@ const App = (props) => {
   return (
     <div>
         <div>
-            <h1 data-testid="title">{props.slide[index].title}</h1>
-            <p data-testid="text">{props.slide[index].text}</p>
+            <h1 data-testid="title">{props.slides[index].title}</h1>
+            <p data-testid="text">{props.slides[index].text}</p>
         </div>
         <div>
           <button id="restart" data-testid="button-restart" disabled onClick={restartHandle}>Restart</button>
