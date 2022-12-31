@@ -11,7 +11,7 @@ const App = (props) => {
         document.getElementById("restart").disabled=false;
     }
 
-    if(index==props.length-1){
+    if(index==props.slides.length-1){
       document.getElementById("next").disabled=true;
     }
   }
