@@ -20,7 +20,7 @@ const App = (props) => {
     if(index>0){
         setIndex(index-1);
         setSlide(props.slides[index]);
-        document.getElementById("next").disabled=true;
+        document.getElementById("next").disabled=false;
     }
     if(index==0){
       document.getElementById("prev").disabled=true;
