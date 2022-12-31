@@ -3,8 +3,6 @@ import '../styles/App.css';
 
 const App = (props) => {
   const [index,setIndex] = useState(0);
-  document.getElementById("prev").disabled=true;
-  document.getElementById("restart").disabled=true;
   const nextHandle = () =>{
     if(index<props.slides.length){
         setIndex(index => index+1);
