@@ -27,12 +27,10 @@ const App = (props) => {
     }
     console.log("index = "+index);
   }
-  const restartHandle = () =>{
+  const restartHandle = (event) =>{
     console.log("restart => index = "+index);
-    if(index!==0){
-        setIndex(0);
-        document.getElementById("restart").disabled=true;
-    }
+    setIndex(0);
+    event.currentTarget.disabled = true;
     console.log("index = "+index);
   }
 
