@@ -6,7 +6,7 @@ const App = (props) => {
 
   const nextHandle = () =>{
     if(index<props.slides.length){
-        setIndex(index+1);
+        setIndex(index => index+1);
         document.getElementById("prev").disabled=false;
         document.getElementById("restart").disabled=false;
     }
@@ -19,7 +19,7 @@ const App = (props) => {
   const prevHandle = () =>{
     console.log("prev => index = "+index);
     if(index>0){
-        setIndex(index-1);
+        setIndex(index => index-1);
         document.getElementById("next").disabled=false;
     }
     if(index===0){
